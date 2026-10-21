@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vagabond Standard</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <!-- Header Section -->
+        <header class="header">
+            <a href="#" class="logo"> <i class="fa fa-shopping-basket"></i> Vagabond Standard </a>
+            
+            <nav class="navbar">
+                <a href="#Home">Home</a>
+                <a href="#features">Features</a>
+                <a href="#products">Products</a>
+                <a href="#Reviews">Reviews</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSf-2BigsGH7MN7y_Ib1UuzEI2aA8VKgP72_XXBq6uvh3mQiLw/viewform?usp=publish-editor" target="_blank">Raise Query</a>
+            </nav>
+
+            <!-- Header Icons Area -->
+            <div class="icons">
+                <div class="fa fa-bars" id="menu-btn"></div>
+                <div class="fa fa-search" id="search-btn"></div>
+                <div class="fa fa-shopping-cart" id="cart-btn">
+                    <span class="cart-count">0</span>
+                </div>
+                <div class="fa fa-user" id="login-btn"></div>
+            </div>
+
+            <!-- Shopping Cart Drawer -->
+            <div class="shopping-cart">
+                <div class="cart-items-container">
+                    <!-- Cart items inserted via JS -->
+                </div>
+                <div class="total"> Total : ₹<span class="total-price">0</span> </div>
+                <a href="#" class="btn checkout-btn">Checkout</a>
+            </div>
+
+            <!-- Search Form -->
+            <form class="search-form">
+                <input type="search" id="search-box" placeholder=" Hey! Search here ...">
+                <label for="search-box" class="fa fa-search"></label>
+            </form>
+
+            <!-- Login Form -->
+            <form action="#" class="login-form">
+                <h3>Login Now</h3>
+                <input type="email" placeholder="Email Id" class="box" autocapitalize="off" autocorrect="off">
+                <input type="text" id="passField" placeholder="Password" class="box" autocapitalize="off" autocorrect="off">
+                <p>Forgot your Password? <a href="#">Click here</a></p>
+                <p>Don't have account? Order directly no need to login <a href="#"></a></p>
+                <a href="#" class="btn">Login now</a>
+            </form>
+        </header>
+
+        <!-- Home Banner Section -->
+        <section class="home" id="Home">
+            <div class="content">
+                <h3>Be<span>BOLD</span>Be<span>ELEGANT</span></h3>
+                <p>We deal with trendy and bold clothing</p>
+                <a href="#products" class="btn">Shop Now</a>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features" id="features">
+            <h1 class="heading"> Our <span>Features</span> </h1> 
+            <div class="box-container">
+                <div class="box">
+                    <img src="image/4.4 .jpg" alt="Feature 1">
+                    <h3>Genuine</h3>
+                    <p>Crafted for comfort and built to last</p>
+                    <a href="#" class="btn">Explore</a>
+                </div>
+
+                <div class="box">
+                    <img src="image/images.jpeg" alt="Feature 2">
+                    <h3>Free Delivery</h3>
+                    <p>Free delivery all over INDIA</p>
+                    <a href="#" class="btn">Explore</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Products Section -->
+<section class="products" id="products">
+    <h1 class="heading"> Our <span>Products</span> </h1>
+
+    <div class="product-slider">
+        <div class="wrapper">
+            <div class="box" data-name="Description of kurti 1" data-price="499"> 
+                <img src="image/1.3 .jpg" alt="Kurti 1">
+                <h1>Description of kurti 1</h1>
+                <div class="price">₹499</div>
+                <a href="#" class="btn add-to-cart-btn">Add to cart</a>
+            </div>
+
+            <div class="box" data-name="Description of kurti 2" data-price="649"> 
+                <img src="image/2.1 .jpg" alt="Kurti 2">
+                <h1>Description of kurti 2</h1>
+                <div class="price">₹649</div>
+                <a href="#" class="btn add-to-cart-btn">Add to cart</a>
+            </div>
+
+            <div class="box" data-name="Description of kurti 3" data-price="1299"> 
+                <img src="image/3.3 .jpg" alt="Kurti 3">
+                <h1>Description of kurti 3</h1>
+                <div class="price">₹1299</div>
+                <a href="#" class="btn add-to-cart-btn">Add to cart</a>
+            </div>
+
+            <div class="box" data-name="Description of kurti 4" data-price="649"> 
+                <img src="image/4.1 .jpg" alt="Kurti 4">
+                <h1>Description of kurti 4</h1>
+                <div class="price">₹649</div>
+                <a href="#" class="btn add-to-cart-btn">Add to cart</a>
+            </div>
+
+            <div class="box" data-name="Description of kurti 5" data-price="949"> 
+                <img src="image/5.4 .jpg" alt="Kurti 5">
+                <h1>Description of kurti 5</h1>
+                <div class="price">₹949</div>
+                <a href="#" class="btn add-to-cart-btn">Add to cart</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <!-- Payment Checkout Modal (Popup) -->
+        <div class="payment-modal" id="paymentModal">
+            <div class="modal-box">
+                <span class="close-payment">&times;</span>
+                <h2>Delivery Address & Payment</h2>
+                
+                <!-- Address Form -->
+                <div class="address-section">
+                    <h3>Guest Checkout & Shipping</h3>
+                    <div class="input-group">
+                        <input type="text" id="cxName" placeholder="Full Name *" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="cxPhone" placeholder="Mobile Number *" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="cxEmail" placeholder="Email Address *" autocapitalize="none" autocorrect="off" spellcheck="false" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="cxArea" placeholder="1) Area Name / Landmark *" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="cxHouse" placeholder="2) Flat / House / Building Name *" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="cxStreet" placeholder="3) Street / Road Name *" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="cxSocietyname" placeholder="4) Society Name / Club Name (Optional)">
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="cxCityPin" placeholder="5) City, State & Pincode *" required>
+                    </div>
+                </div>
+
+                <div class="order-summary-box">
+                    <p>Total Payable Amount: <strong>₹<span id="checkoutTotal">0</span></strong></p>
+                    <small style="color: var(--green); font-weight: bold;">(No extra charges applied)</small>
+                </div>
+
+                <!-- Payment Method Options -->
+                <div class="payment-options">
+                    <label class="option-card">
+                        <input type="radio" name="payment_method" value="online" checked>
+                        <span>Online Payment (UPI / QR / Bank Transfer)</span>
+                    </label>
+                    <label class="option-card">
+                        <input type="radio" name="payment_method" value="cod">
+                        <span>Cash on Delivery (COD)</span>
+                    </label>
+                </div>
+
+                <!-- Online Payment Details -->
+                <div class="payment-details-section" id="onlineSection">
+                    <div class="qr-container">
+                        <img src="image/qr.jpeg" alt="Scan QR Code to Pay" class="qr-img" onerror="this.src='https://placehold.co/200x200?text=UPI+QR+Code'">
+                        <p>Scan & Pay via any UPI App</p>
+                    </div>
+                    
+                    <div class="bank-details">
+                        <h3>Bank Account Details</h3>
+                        <p><strong>Account Name:</strong> Vagabond Standard</p>
+                        <p><strong>Account Number:</strong> 6211001500015842</p>
+                        <p><strong>IFSC Code:</strong> PUNB0621100</p>
+                    </div>
+
+                    <!-- Payment Screenshot Upload Field -->
+                    <div class="screenshot-upload-box" style="margin-top: 1rem; text-align: left;">
+                        <label for="paymentScreenshot" style="font-size: 0.9rem; font-weight: bold; color: var(--black); display: block; margin-bottom: 0.4rem;">
+                            Upload Payment Screenshot (Required for Prepaid) *
+                        </label>
+                        <input type="file" id="paymentScreenshot" accept="image/*" style="width: 100%; padding: 0.5rem; background: #f4f4f4; border: 1px solid #ccc; border-radius: 6px;">
+                        <small style="color: var(--light-color); font-size: 0.8rem; display: block; margin-top: 0.2rem;">If payment verification fails, your order will be cancelled.</small>
+                    </div>
+                </div>
+
+                <!-- COD Details -->
+                <div class="payment-details-section" id="codSection" style="display: none;">
+                    <div class="cod-box">
+                        <i class="fa fa-truck" style="font-size: 2.5rem; color: var(--green);"></i>
+                        <p>Pay with cash when your product is delivered to your doorstep.</p>
+                        <p><strong>Extra Charge: ₹0</strong></p>
+                    </div>
+                </div>
+
+                <button class="btn confirm-btn" id="confirmOrderBtn">Place Order</button>
+            </div>
+        </div>
+
+        <!-- Image Lightbox Modal -->
+        <div class="image-modal" id="imageModal">
+            <span class="close-modal">&times;</span>
+            <div class="modal-content-wrapper">
+                <img class="modal-content" id="modalImage" alt="Zoomed Product">
+            </div>
+            <div class="zoom-controls">
+                <button id="zoomInBtn"><i class="fa fa-search-plus"></i></button>
+                <button id="zoomOutBtn"><i class="fa fa-search-minus"></i></button>
+                <button id="zoomResetBtn"><i class="fa fa-refresh"></i></button>
+            </div>
+        </div>
+
+
+        
+
+        <script src="js/script.js"></script> 
+    </body>
+</html>
